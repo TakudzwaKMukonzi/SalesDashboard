@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>sale dashboard</title>
+
+		<!--ppMontserrat font-->
+
+		<!--Material Icons-->
+		<link rel="stylesheet" href="https://fonts.googleleapis.com/icon?family=Material+Icons+Outlined">
+
+		<!--Custom CSS-->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<div class ="grid-container">
+
+			<!--Header-->
+			<header class="header">
+				<div class ="menu-icon" onclick="openSidebar()">
+					<span class ="material-icons-outlined">menu</span>
+				</div>
+				<div class ="header-left">
+					<span class="material-icons-outlined">search</span>
+				</div>
+				<div class ="header-right">
+					<span class="material-icons-outlined">notification</span>
+					<span class="material-icons-outlined">email</span>
+					<span class="material-icons-outlined">account_circle</span>
+				</div> 
+			</header>
+			<!--End Header-->
+
+			<!--Sidebar-->
+			<aside id="sidebar">
+				<div class="sidebar-title">
+					<div class="sidebar-brand">
+						<span class="material-icons-outlined">Inventory</span> Taku's Inventory
+					</div>
+					<span class ="material-icons-outlined" onclick="closeSidebar">close</span>
+				</div>
+				<ul class="sidebar-list">
+					<li class="sidebar-list-item">
+						<span class="material-icons-outlined">dashboard</span>Dashboard
+					</li>
+					<li class="sidebar-list-item">
+						<span class="material-icons-outlined">inventory_2</span>Products
+					</li>
+					<li class="sidebar-list-item">
+						<span class="material-icons-outlined">fact_check</span>Inventory
+					</li>
+					<li class="sidebar-list-item">
+						<span class="material-icons-outlined">add_shopping_cart</span>Purchase Orders
+					</li>
+					<li class="sidebar-list-item">
+						<span class="material-icons-outlined">poll</span>Reports
+					</li>
+					<li class="sidebar-list-item">
+						<span class="material-icons-outlined">settings</span>Settings
+					</li>					
+				</ul>
+			</aside>
+			<!--End Sidebar-->
+
+			<main class ="main-container">
+				<div class ="main-title">
+					<p class="font-weight-bold">DASHBOARD</p>
+				</div>
+				<div class="main-cards">
+
+					<div class="card">
+						<div class="card-inner">
+							<p class ="text-primary">PRODUCTS</p>
+							<span class="material-icons-outlined text-blue">Inventory_2</span>
+						</div>
+						<span class ="text-primary font-weight-bold">249</span>
+					</div>
+
+					<div class="card">
+						<div class="card-inner">
+							<p class ="text-primary">PURCHASE ORDERS</p>
+							<span class="material-icons-outlined text-orange">add_shopping_cart</span>
+						</div>
+						<span class ="text-primary font-weight-bold">83</span>
+					</div>
+
+					<div class="card">
+						<div class="card-inner">
+							<p class ="text-primary">SALES ORDERS</p>
+							<span class="material-icons-outlined text-green">shopping_cart</span>
+						</div>
+						<span class ="text-primary font-weight-bold">79</span>
+					</div>
+
+					<div class="card">
+						<div class="card-inner">
+							<p class ="text-primary">INVENTORY ALERTS</p>
+							<span class="material-icons-outlined text-red">notification_important</span>
+						</div>
+						<span class ="text-primary font-weight-bold">56</span>
+					</div>
+				</div>
+				<div class="charts">
+					<div class="charts-card">
+						<p class="chart-tittle"> Top 5 Products</p>
+						<div id="bar-chart"></div>
+					</div>
+					<div class="charts-card">
+						<p class="chart-tittle">Purchase and Sales Orders</p>
+						<div id="area-chart"></div>
+					</div>
+					
+				</div>
+			</main>
+		</div>
+		<!--Scripts-->
+		<!--ApexCharts-->
+		<script src ="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35/apexcharts.min.js"></script>
+		<!--Custom JS-->
+		<script type="text/javascript" src="js/scripts.js"></script>
+	</body>
+</html>
