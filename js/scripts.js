@@ -7,8 +7,7 @@ function openSidebar()
 {
 	if(!sidebarOpen)
 	{
-		sidebar.classList.add
-		("sidebar-responsive");
+		sidebar.classList.add("sidebar-responsive");
 		sidebarOpen = true;
 	}
 
@@ -24,42 +23,45 @@ function closeSidebar()
 	}
 }
 
-var barChartOption =
+
+// --------- CHARTS ---------
+
+// BAR CHART
+
+var barChartOptions =
 {
-	series:
-	[{	
-		data:[10, 8, 6, 4, 2]
+	series: 
+	[{
+		data: [10, 8, 6, 4, 2]
 	}],
 
 	chart:
 	{
 		type: 'bar',
-	    height: 350, 
-	    toolbar:
-	    {
-	    	show: false
-	    }
+		height: 350,
+		toolbar:
+		{
+			show: false,
+		},
 	},
 
-	colors:
-	[
+	colors: [
 		"#246dec",
 		"#cc3c43",
 		"#367952",
-		"#f5b741",
+		"#f5b74f",
 		"#4f35a1"
-	],
 
-	plotOptions
-	{
-		bar:
-		{
-			distrubuted: true,
-			borderRadius: 4,
-			horizontal: false,
-			columnwidth: '40%'
-		}
-	},
+	 ],
+
+	 plotOptions:{
+	 	bar:{
+	 		distributed: true,
+	 		borderRadius: 4,
+	 		horizontal: false,
+	 		columnWidth: '40%',
+	 	}
+	 },
 
 	dataLabels:
 	{
@@ -71,23 +73,16 @@ var barChartOption =
 		show: false
 	},
 
-	xaxis:
-	{
-		categories:
-		[
-			"Laptop",
-			"Phone",
-			"Monitor",
-			"Headphones",
-			"Camera"
-		],
-	},
+	xaxis: {
+		categories: ["Laptop","Phone","Monitor","Headphones","Camera"],
+
+    },
 
 	yaxis:
 	{
 		title:
 		{
-			text:"count"
+			text: "Count"
 		}
 	}
 };
@@ -95,52 +90,44 @@ var barChartOption =
 var barChart = new ApexCharts(document.querySelector("#bar-chart"), barChartOptions);
 barChart.render();
 
-// AREA CHARTS
+// AREA CHART
 
-var areChartOptions =
-{
-	series: 
-	[{
+var areaChartOptions = {
+	series: [{
 		name: 'Purchase Orders',
 		data: [31, 40, 28, 51, 42, 109, 100]
-	},
-		{
-			name: 'Sales Orders',
-			data: [11, 32, 45, 34, 52, 41]
-		}
-
-
-	],
-
-	charts:
+	}, 
 	{
-		height: 350,
+		name: 'Sales Orders',
+		data: [11, 32, 45, 32, 34, 52, 41]
+	}],
+
+	chart:{
+		height: 350, 
 		type: 'area',
 		toolbar:
 		{
-			show: false,
-		},
-	},
+			show: false, 
+		}, 
+	}, 
 
 	colors: ["#4f35a1", "#246dec"],
 	dataLabels:
 	{
 		enabled: false,
-	},
+	}, 
 
-	stroke:
-	{
+	stroke: {
 		curve: 'smooth'
-	},
+	}, 
 
-	labels: ["Jan","Feb","Mar","Apr","May","Jun", "Jul"],
-	makers:
+	labels:["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"], 
+	markers:
 	{
-		size: 100
+		size: 0
 	},
 
-	yaxis:
-	[
+	yaxis: [
 	{
 		title:
 		{
@@ -149,14 +136,14 @@ var areChartOptions =
 	},
 
 	{
-		opposite: true,
-	    title:
+		opposite: true, 
+		title:
 	    {
-			text: 'Sales Orders',
-	    },
-	},
+	    	text: 'Sales Orders',
+		}, 
+	}, 
 	],
-	
+
 	tooltip:
 	{
 		shared: true,
@@ -164,5 +151,5 @@ var areChartOptions =
 	}
 };
 
-var areChart = new ApexCharts(document.querySelector("#area-chart"), areChartOptions);
-areChart.render();
+var areaChart = new ApexCharts(document.querySelector("#area-chart"), areaChartOptions);
+areaChart.render();
