@@ -294,3 +294,8 @@ body
 		display: none;
 	}
 }
+
+header div span
+{
+	cursor: pointer;
+}
